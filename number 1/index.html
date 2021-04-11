@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        {{ name }}
+        <br>
+        {{myname()}}
+        <br>
+        {{myage(21)}}
+      </div>
+
+    <script >
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Good job',
+    name: 'Dipak Debnath'
+  },
+  methods:{
+      myname(){
+          return "Dipak debnath daffodol"
+      },
+      myage(age){
+          return `name , ${this.name} welcome , age is ,${age}`
+      }
+  }
+})
+    </script>
+</body>
+</html>
